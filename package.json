@@ -1,0 +1,12 @@
+{
+  "name": "profile-image-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.83.0",
+    "sharp": "^0.19.1"
+  },
+  "devDependencies": {},
+  "author": "Amos Wong <amoswwj@gmail.com>"
+}
