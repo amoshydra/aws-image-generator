@@ -116,8 +116,11 @@ module.exports = {
     }
   },
   getPlaceholder(stream) {
-    return sharp(__dirname + './assets/empty.png')
-      .jpeg()
-      .pipe(stream);
+    return new Promise((resolve, reject) => {
+      const placeholderStream = sharp(__dirname + '/assets/empty.png')
+        .jpeg()
+      if (stream) placeholderStream.pipe(stream);
+      resolve(placeholderStream);
+    })
   }
 };
